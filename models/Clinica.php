@@ -12,6 +12,8 @@ use Yii;
  * @property string|null $CEP
  * @property string|null $Endereco
  * @property string|null $Bairro
+ * @property string|null $Cidade
+ * @property string|null $UF
  * @property int|null $ibge
  * @property string|null $Imagem
  * @property string $criado_em
@@ -37,9 +39,10 @@ class Clinica extends \yii\db\ActiveRecord
             [['Clinica_id', 'Nome'], 'required'],
             [['Clinica_id', 'ibge', 'status'], 'integer'],
             [['criado_em', 'atualizado_em'], 'safe'],
-            [['Nome', 'Endereco', 'Imagem'], 'string', 'max' => 145],
+            [['Nome', 'Endereco', 'Cidade', 'Imagem'], 'string', 'max' => 145],
             [['CEP'], 'string', 'max' => 10],
             [['Bairro'], 'string', 'max' => 60],
+            [['UF'], 'string', 'max' => 2],
             [['Clinica_id'], 'unique'],
         ];
     }
@@ -55,6 +58,8 @@ class Clinica extends \yii\db\ActiveRecord
             'CEP' => Yii::t('app', 'Cep'),
             'Endereco' => Yii::t('app', 'Endereco'),
             'Bairro' => Yii::t('app', 'Bairro'),
+            'Cidade' => Yii::t('app', 'Cidade'),
+            'UF' => Yii::t('app', 'Uf'),
             'ibge' => Yii::t('app', 'Ibge'),
             'Imagem' => Yii::t('app', 'Imagem'),
             'criado_em' => Yii::t('app', 'Criado Em'),

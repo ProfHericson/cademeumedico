@@ -2,11 +2,16 @@
 
 namespace app\controllers;
 
+use app\models\Clinica;
+
 class ClinicasController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $clinicas = Clinica::find()->orderBy("Nome")->all();
+        return $this->render('index',[
+            'clinicas' => $clinicas
+        ]);
     }
 
     public function actionView()

@@ -55,6 +55,7 @@ if(navigator.geolocation) {
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Sobre', 'url' => ['/site/about']],
+            ['label' => 'Clínicas', 'url' => ['/clinicas/index']],
             ['label' => 'Especialidades', 'url' => ['/especialidades/index']],
             ['label' => 'Contato', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
