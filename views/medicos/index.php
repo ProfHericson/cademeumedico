@@ -2,25 +2,27 @@
 /* @var $this yii\web\View */
 use yii\helpers\Url;
 
-$this->title = "Clínicas";
+$this->title = "Medicos";
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<h1>Clínicas</h1>
+
+
+<h1>Médicos</h1>
+
 <p>
-    Aqui você pode encontrar as principais clinicas
+    You may change the content of this page by modifying
+    the file <code><?= __FILE__; ?></code>.
 </p>
 <div class="row">
-      <?php foreach ($clinicas as $key => $linha):?>
-          <div class="col-lg-4">
-            <img src="<?php echo $linha->Imagem?>" class="img-responsive" alt="<?php echo $linha->Nome?>">
+      <?php foreach ($medicos as $key => $linha):?>
+          <div class="col-lg-3 text-center">
+            <img src="<?php echo $linha->Imagem?>" class="img-responsive img-circle" alt="<?php echo $linha->Nome?>">
             <h2><?php echo $linha->Nome?></h2>
              <p>
-                CEP: <?php echo $linha->CEP?> <br>
-                Endereço: <?php echo $linha->Endereco?><br>
-                Bairro: <?php echo $linha->Bairro?> <br>
-                Cidade: <?php echo $linha->Cidade?> - <?php echo $linha->UF?>     
+                CRM: <?php echo $linha->CRM?> <br>
+                E-mail: <?php echo $linha->email?><br>
              </p>
              
             <p><a class="btn btn-primary" href="<?php echo Url::to('especialidades/view')?>" role="button">Ver Detalhes »</a></p>
@@ -33,3 +35,4 @@ $this->params['breadcrumbs'][] = $this->title;
       <?php endforeach; ?>
     </div>
       <hr>
+

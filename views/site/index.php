@@ -5,6 +5,7 @@
 $this->title = Yii::$app->name;
 
 ?>
+</div>
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -83,7 +84,3 @@ $this->title = Yii::$app->name;
         </div><!-- /.col-lg-4 -->
       </div>
       <hr class="featurette-divider">
-
-
-        
-    </div>

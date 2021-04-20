@@ -1,9 +1,11 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
+$this->title = "Especialidades";
+$this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="container">
+
   <h1>Especialidades</h1>
   <p>À medida em que a tecnologia e o conhecimento médico evoluíram no século XX, o exercício da profissão fragmentou-se cada vez mais. A figura do médico “clínico geral” que era aquele que atuava em todas as áreas não existe mais. <br><br>
   Nem sempre é fácil enquadrar as especialidades existentes nos 5 troncos clássicos (clínica médica, cirurgia geral, pediatria, ginecologia e obstetrícia e a saúde coletiva) ou mesmo definir o que é uma especialidade ou área de atuação (subespecialidade).</p>
@@ -23,4 +25,3 @@ use yii\widgets\Breadcrumbs;
       <?php endforeach; ?>
     </div>
       <hr>
-</div>

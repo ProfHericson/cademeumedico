@@ -54,9 +54,10 @@ if(navigator.geolocation) {
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Sobre', 'url' => ['/site/about']],
+            ['label' => 'Médicos', 'url' => ['/medicos/index']],
             ['label' => 'Clínicas', 'url' => ['/clinicas/index']],
             ['label' => 'Especialidades', 'url' => ['/especialidades/index']],
+            ['label' => 'Sobre', 'url' => ['/site/about']],
             ['label' => 'Contato', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
@@ -75,19 +76,14 @@ if(navigator.geolocation) {
     NavBar::end();
     ?>
 </header>
-    
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
+       <div class="container">
+        <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
-    
-
-
+        </div> 
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; <?= Yii::$app->name ?> <?= date('Y') ?></p>
-
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
